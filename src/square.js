@@ -1,18 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 
-const Square = () => {
-    const [value, setValue] = useState('')
-    const handleClink = () => {
-        // console.log("Clinked!");'
-        setValue(`x`)
-        console.log(value);
-    }
+const Square = (props) => {
     return (
-        <button
-            className="square"
-            onClick={handleClink}
-        >
-            {value}
+        <button className="square" onClick={props.onSquareClick}>
+            {props.value}
         </button>
     )
 }
